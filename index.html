@@ -26,10 +26,12 @@
       bottom: 0;
     }
     .container {
-      position: relative;
-      margin: 120px auto 0 auto;
-      width: 320px;
-    }
+  position: center  ;
+  margin: 50% auto 0 auto;
+  width: 300px; /* antes era 320px */
+  height: 300px;
+}
+    
     .ico {
   display: block;
   width: 320px;
@@ -41,7 +43,6 @@
       transform: scale(10);
     }
     .ico .title {
-      opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -105,14 +106,18 @@
 }
 
 .endtext {
-  position: relative; /* ou absolute, dependendo do layout */
+  position: absolute; /* Mudamos de relative para absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
-  opacity: 0; /* começa invisível */
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
 .open .endtext {
@@ -125,15 +130,20 @@
       top: 0;
       right: 0;
       cursor: pointer;
-      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+      text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
     }
     .endtext h1,
     .endtext h2,
     .endtext h3 {
-      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      font-weight: normal;
-    }
+  font-size: 32px !important;
+  line-height: 1.8 !important;
+  padding: 15px !important;
+  text-align: justify !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  
+  }
+    
     .endtext h1 {
       font-size: 50px;
     }
@@ -192,7 +202,7 @@
     <div class="container">
       <span class="ico">
         <span class="ico2"></span>
-        <span class="title">OOO</span>
+        <span class="title">ABRA</span>
       </span>
       <div class="endtext">
         <span class="close" title="Restart"><i class="fa fa-times"></i></span>
